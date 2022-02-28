@@ -17075,8 +17075,8 @@ header {
   overflow: hidden;
   background: black;
   background: linear-gradient(60deg, black 0%, #0a0a0a 100%);
-  height: 100vh;
-  min-height: 1080px;
+  padding-top: 200px;
+  padding-bottom: 80px;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -17085,26 +17085,13 @@ header {
 .top-main::after {
   content: "";
   background-image: url("../img/Group3.png");
-  height: 550px;
+  height: 500px;
   width: 560px;
   background-size: contain;
   left: -160px;
   bottom: 50px;
   position: absolute;
   z-index: 0;
-}
-.top-main::before {
-  content: "";
-  background-image: url("../img/bg-rigth1.png");
-  height: 100%;
-  width: 50%;
-  background-size: cover;
-  right: 0;
-  bottom: 0px;
-  top: 0px;
-  position: absolute;
-  z-index: 0;
-  background-position: right;
   background-repeat: no-repeat;
 }
 .top-main .container {
@@ -17132,7 +17119,7 @@ header {
 }
 .top-main .right-side img.right-img {
   max-height: 100vh;
-  max-width: 90%;
+  max-width: 34vw;
 }
 .top-main .right-side .icon-title {
   position: absolute;
@@ -17160,6 +17147,20 @@ header {
 }
 .top-main .right-side .icon-title ul li .icon-details img {
   margin-right: 16px;
+}
+.top-main .right-side::before {
+  content: "";
+  background-image: url("../img/bg-rigth1.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  right: 0;
+  bottom: 0px;
+  top: -15vh;
+  position: absolute;
+  z-index: 0;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 footer {
@@ -17201,6 +17202,177 @@ footer .FooterCopyright ul li a {
 }
 footer .FooterCopyright span {
   white-space: normal;
+}
+
+@media screen and (min-width: 1920px) {
+  .top-main {
+    height: 100vh;
+    min-height: 1080px;
+  }
+  .top-main::after {
+    height: 550px;
+    width: 560px;
+  }
+}
+@media screen and (max-width: 1799px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  .top-main .right-side::before {
+    top: -18.5vh;
+    background-position: left;
+    right: -60px;
+  }
+
+  .top-main::after {
+    height: 28vw;
+    width: 430px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  .top-main {
+    height: auto;
+    min-height: 820px;
+    padding-bottom: 80px;
+  }
+
+  .left-side {
+    padding-right: 80px;
+  }
+
+  .top-main::after {
+    bottom: 84px;
+  }
+}
+@media screen and (max-width: 1399.98px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 1299.98px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .top-main {
+    padding-top: 200px;
+    padding-bottom: 80px;
+    height: auto;
+    min-height: 520px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .top-main {
+    padding-top: 200px;
+    padding-bottom: 80px;
+    height: auto;
+    display: block;
+    min-height: auto;
+  }
+
+  .top-main .right-side .icon-title {
+    position: unset;
+    flex: 0 0 280px;
+  }
+
+  .top-main .right-side::before {
+    top: -18.5vh;
+    background-position: left;
+    height: 120vh;
+  }
+
+  .top-main::after {
+    content: none;
+  }
+
+  .top-main .right-side .icon-title ul li:nth-child(2) {
+    position: relative;
+    left: 0;
+  }
+
+  .top-main .right-side {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .top-main .right-side img.right-img {
+    max-height: 100vh;
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 1024.98px) {
+  .left-side {
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .top-main .right-side img.right-img {
+    max-height: initial;
+    max-width: 390px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  header {
+    padding-top: 30px;
+  }
+
+  .top-main {
+    padding-top: 150px;
+  }
+
+  .top-main .right-side img.right-img {
+    max-height: 100vh;
+    max-width: 320px;
+  }
+
+  .top-main .btn-download {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .top-main .btn-download a + a {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  .left-side {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650.98px) {
+  .top-main .right-side {
+    flex-direction: column-reverse;
+  }
+
+  .top-main .right-side img.right-img {
+    max-width: 400px;
+  }
+
+  .top-main .right-side .text-end {
+    margin-bottom: 30px;
+  }
+
+  footer .footer-info {
+    padding-right: 0px;
+  }
+
+  .top-main .right-side::before {
+    background-image: url("../img/bg-rigth.png");
+  }
+}
+@media screen and (max-width: 579.98px) {
+  .container {
+    max-width: calc(100% - 30px);
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
