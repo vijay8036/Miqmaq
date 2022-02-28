@@ -17373,6 +17373,10 @@ footer .FooterCopyright span {
   .container {
     max-width: calc(100% - 30px);
   }
+
+  .top-main .right-side img.right-img {
+    max-width: 340px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
