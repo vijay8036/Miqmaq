@@ -17156,7 +17156,7 @@ header {
   background-size: cover;
   right: 0;
   bottom: 0px;
-  top: -15vh;
+  top: -18vh;
   position: absolute;
   z-index: 0;
   background-position: right;
@@ -17207,11 +17207,15 @@ footer .FooterCopyright span {
 @media screen and (min-width: 1920px) {
   .top-main {
     height: 100vh;
-    min-height: 1080px;
+    min-height: 880px;
   }
   .top-main::after {
     height: 550px;
     width: 560px;
+  }
+
+  .top-main .right-side::before {
+    top: -18vh;
   }
 }
 @media screen and (max-width: 1799px) {
@@ -17220,7 +17224,7 @@ footer .FooterCopyright span {
   }
 
   .top-main .right-side::before {
-    top: -18.5vh;
+    top: -22.5vh;
     background-position: left;
     right: -60px;
   }
@@ -17286,8 +17290,10 @@ footer .FooterCopyright span {
 
   .top-main .right-side::before {
     top: -18.5vh;
+    background-image: url("../img/bg-rigth.png");
     background-position: left;
     height: 120vh;
+    background-size: cover;
   }
 
   .top-main::after {

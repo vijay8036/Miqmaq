@@ -1,11 +1,12 @@
 @media screen and (min-width: 1920px) {
-    .top-main{ height: 100vh; min-height: 1080px; 
-        &::after{ height: 550px; width: 560px; } 
+    .top-main{ height: 100vh; min-height: 880px; 
+        &::after{ height: 550px; width: 560px;  } 
     }
+    .top-main .right-side::before { top: -18vh; }
 }
 @media screen and (max-width: 1799px) {
     h1 { font-size: 100px; }
-    .top-main .right-side::before { top: -18.5vh; background-position: left; right: -60px; }
+    .top-main .right-side::before { top: -22.5vh; background-position: left; right: -60px; }
     .top-main::after { height: 28vw; width: 430px; }
 } 
 
@@ -26,7 +27,7 @@
     h1 { font-size: 50px; }
     .top-main { padding-top: 200px; padding-bottom: 80px; height: auto; display: block; min-height: auto; }
     .top-main .right-side .icon-title { position: unset; flex: 0 0 280px; }
-    .top-main .right-side::before { top: -18.5vh; background-position: left; height: 120vh; }
+    .top-main .right-side::before { top: -18.5vh; background-image: url('../img/bg-rigth.png'); background-position: left; height: 120vh; background-size: cover; }
     .top-main::after{ content: none; }
     .top-main .right-side .icon-title ul li:nth-child(2) { position: relative; left: 0; }
     .top-main .right-side { justify-content: space-between; position: relative; }
