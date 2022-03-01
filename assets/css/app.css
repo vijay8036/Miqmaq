@@ -17106,9 +17106,55 @@ header {
 }
 .top-main .btn-download a {
   overflow: hidden;
+  width: 232px;
+  border-radius: 18px;
+  position: relative;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .top-main .btn-download a img {
   border-radius: 18px;
+}
+.top-main .btn-download a img.hover-img {
+  display: none;
+}
+.top-main .btn-download a:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.top-main .btn-download a:hover img.hover-img {
+  display: block;
+}
+.top-main .btn-download a:hover img:not(.hover-img) {
+  display: none;
+}
+.top-main .btn-download a:after {
+  background: #fff;
+  content: "";
+  height: 100%;
+  left: -75px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 230px;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  z-index: 9;
+}
+.top-main .btn-download a:hover:after {
+  left: 120%;
+  opacity: 1;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .top-main .btn-download a + a {
   margin-left: 32px;

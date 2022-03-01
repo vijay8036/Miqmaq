@@ -77,8 +77,45 @@ header{ position: absolute; z-index: 9; width: 100%; padding-top: 57px; }
     .container{position: relative; z-index: 2;}
     h1{ margin-bottom: 27px; }
     .btn-download{margin-top: 50px;
-        a{overflow: hidden;
+        a{overflow: hidden;     width: 232px; border-radius: 18px; position: relative;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
             img{ border-radius: 18px; }
+            img.hover-img{display: none;}
+            &:hover{ 
+                -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                transform: scale(1.05);
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                img.hover-img{display: block;}
+                img:not(.hover-img){display: none;}
+            }
+            &:after {
+                background: #fff;
+                content: "";
+                height: 100%;
+                left: -75px;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                width: 230px;
+                -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+                transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+                z-index: 9;
+            }
+            &:hover:after {
+                left: 120%;
+                opacity: 1;
+                -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+            }
         + a{margin-left: 32px;}
         }
     }
