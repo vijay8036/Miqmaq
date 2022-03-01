@@ -1,6 +1,6 @@
 @media screen and (min-width: 1920px) {
     .top-main{ height: 100vh; min-height: 880px; 
-        &::after{ height: 550px; width: 560px;  } 
+        &::after{ height: 480px; width: 560px;  } 
     }
     .top-main .right-side::before { top: -18vh; }
 }
