@@ -17204,7 +17204,7 @@ header {
   bottom: 0px;
   top: -22vh;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   background-position: right;
   background-repeat: no-repeat;
 }
